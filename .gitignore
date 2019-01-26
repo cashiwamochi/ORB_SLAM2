@@ -22,3 +22,5 @@ build/
 *~
 lib/
 
+libtorch-shared-with-deps-latest.zip
+libtorch

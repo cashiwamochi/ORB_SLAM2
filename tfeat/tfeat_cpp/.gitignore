@@ -20,3 +20,4 @@ yosemite.pt
 tfeat_model.pt
 cpp_example/build
 cpp_example/libtorch
+cpp_example/libtorch-shared-with-deps-latest.zip
