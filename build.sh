@@ -3,8 +3,8 @@ echo "Configuring and building Thirdparty/DBoW2 ..."
 cd Thirdparty/DBoW2
 mkdir build
 cd build
-cmake .. -DCMAKE_BUILD_TYPE=Release -D_GLIBCXX_USE_CXX11_ABI=0
-make -j
+cmake .. -DCMAKE_BUILD_TYPE=Release -DCMAKE_CXX_FLAGS=-D_GLIBCXX_USE_CXX11_ABI=0
+make -j2
 
 cd ../../g2o
 
@@ -13,7 +13,15 @@ echo "Configuring and building Thirdparty/g2o ..."
 mkdir build
 cd build
 cmake .. -DCMAKE_BUILD_TYPE=Release
-make -j
+make -j2
+
+echo "Configuring and building tfeat/Pangolin ..."
+
+cd ../../../tfeat/Pangolin
+mkdir build
+cd build
+cmake .. -DCMAKE_BUILD_TYPE=Release -DCMAKE_CXX_FLAGS=-D_GLIBCXX_USE_CXX11_ABI=0
+make -j2
 
 cd ../../../
 
@@ -27,5 +35,5 @@ echo "Configuring and building ORB_SLAM2 ..."
 
 mkdir build
 cd build
-cmake .. -DCMAKE_BUILD_TYPE=Release
-make -j
+cmake .. -DCMAKE_BUILD_TYPE=Release -DCMAKE_CXX_FLAGS=-D_GLIBCXX_USE_CXX11_ABI=0
+make -j2
